@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #000000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+}
+
+video {
+    display: block;
+    margin: 10px 0;
+}
+
+.tree ul {
+    list-style-type: none;
+    position: relative;
+}
+.tree ul ul {
+    margin-left: 20px;
+}
+.tree li {
+    margin: 0;
+    padding: 10px 5px 0 5px;
+    position: relative;
+}
+.tree li::before, .tree li::after {
+    content: '';
+    position: absolute;
+    left: -20px;
+}
+.tree li::before {
+    border-left: 1px solid #ccc;
+    bottom: 50px;
+    height: 100%;
+    top: 0;
+    width: 1px;
+}
+.tree li::after {
+    border-top: 1px solid #ccc;
+    height: 20px;
+    top: 25px;
+    width: 25px;
+}
+.tree li span {
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+}
+.tree li.parent_li > span {
+    cursor: pointer;
+}
+.tree > ul > li::before, .tree > ul > li::after {
+    border: 0;
+}
+.tree li:last-child::before {
+    height: 30px;
+}
