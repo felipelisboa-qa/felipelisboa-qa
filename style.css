@@ -1,86 +1,124 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    background-color: #1A1F1E; /* fundo em verde escuro semelhante ao Cypress */
+    color: #E0E0E0; /* texto em cinza claro para contraste */
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #000000;
-    color: white;
-    padding: 20px;
-    text-align: center;
+    background-image: url('imagens/banner.jpg'); /* Caminho para a imagem do banner */
+    background-size: cover; /* Ajusta a imagem para cobrir toda a área */
+    background-position: center; /* Centraliza a imagem de fundo */
+    background-repeat: no-repeat;
+    color: #E0E0E0; /* Texto em cinza claro */
+    margin-bottom: 20px;
+    padding: 50px 20px; /* Ajuste de padding para header e footer */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+}
+
+footer {    
+    background-color: #3D6B6B;
+    color: #E0E0E0; /* Texto em cinza claro */
+    margin-bottom: 20px;
+    padding: 50px 20px; /* Ajuste de padding para header e footer */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
 }
 
 section {
+    background-color: #282C2B; /* Fundo em cinza escuro */
+    color: #E0E0E0; /* Texto em cinza claro */
+    margin-bottom: 20px;
     padding: 20px;
-    margin: 20px;
-    background-color: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
 }
 
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: white;
+.btn-outline-light {
+    border-color: #3D6B6B; /* borda em verde escuro */
+    color: #E0E0E0; /* texto em verde escuro */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-img {
+.btn-outline-light:hover {
+    background-color: #3D6B6B; /* fundo em verde escuro */
+    color: #E0E0E0; /* texto em branco */
+}
+
+.rounded-circle {
+    border: 2px solid #3D6B6B; /* borda em verde escuro */
+}
+
+video {
     max-width: 100%;
     height: auto;
     display: block;
     margin: 10px 0;
+    border-radius: 10px; /* bordas arredondadas para vídeos */
 }
 
-video {
-    display: block;
-    margin: 10px 0;
+.tree {
+    background-color: #3D6B6B; /* fundo em verde escuro */
+    padding: 20px;
+    border-radius: 10px; /* bordas arredondadas */
 }
 
 .tree ul {
     list-style-type: none;
     position: relative;
 }
+
 .tree ul ul {
     margin-left: 20px;
 }
+
 .tree li {
     margin: 0;
     padding: 10px 5px 0 5px;
     position: relative;
 }
+
 .tree li::before, .tree li::after {
     content: '';
     position: absolute;
     left: -20px;
+    border-color: #4F9A8B; /* linha de conexão em verde claro */
 }
+
 .tree li::before {
-    border-left: 1px solid #ccc;
+    border-left: 1px solid #4F9A8B;
     bottom: 50px;
     height: 100%;
     top: 0;
     width: 1px;
 }
+
 .tree li::after {
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #4F9A8B;
     height: 20px;
     top: 25px;
     width: 25px;
 }
+
 .tree li span {
-    border: 1px solid #ccc;
+    border: 1px solid #4F9A8B; /* borda em verde claro */
     padding: 5px 10px;
-    text-decoration: none;
+    color: #E0E0E0;
     display: inline-block;
     border-radius: 5px;
+    background-color: #1A1F1E; /* fundo de cada item da árvore */
 }
+
 .tree li.parent_li > span {
     cursor: pointer;
 }
+
 .tree > ul > li::before, .tree > ul > li::after {
     border: 0;
 }
+
 .tree li:last-child::before {
     height: 30px;
 }

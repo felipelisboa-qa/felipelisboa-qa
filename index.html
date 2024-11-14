@@ -4,143 +4,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfólio de Testes Automatizados</title>
+    <title>QA | Felipe Lisboa</title>
+    <link rel="icon" href="imagens/favicon.ico.png" type="image/x-icon">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
-    <header class="bg-dark text-white text-center py-5">
-        <h1>Bem-vindo ao meu Portfólio</h1>
-        <p>Sou um profissional especializado em testes automatizados, sempre em busca de conhecimento.</p>
+    <header class="text-center py-5">
+        <div class="container">
+            <img src="imagens/perfil.jpg" alt="Minha Foto" class="rounded-circle mb-1" width="155" height="155">
+            <h1>Bem-vindo ao meu Portfólio</h1>
+            <p>Sou um profissional especializado em testes automatizados, sempre em busca de conhecimento.</p>
+            <div class="d-flex justify-content-center mt-4">
+                <a href="https://www.linkedin.com/in/felipe-lisboa-aa6b61216/" class="btn btn-outline-light mx-2" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" width="20" height="20"> LinkedIn
+                </a>
+                <a href="https://github.com/felipedeboa" class="btn btn-outline-light mx-2" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="20" height="20"> GitHub
+                </a>
+                <a href="https://wa.me/5585996995988" class="btn btn-outline-light mx-2" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" width="20" height="20"> WhatsApp
+                </a>
+            </div>
+        </div>
     </header>
 
-    <section class="container bg-dark text-white my-5">
+    <section class="container my-5">
         <h2 class="text-center">Testes Automatizados com Selenium</h2>
-        <p class="text-center text-white">SELENIUN - GLPI Envio de Notificação em Massa</p>
-
-        <!-- Centralização do vídeo -->
+        <p class="text-center">SELENIUN - GLPI Envio de Notificação em Massa</p>
         <div class="d-flex justify-content-center">
-            <video width="600" height="400" controls>
+            <video controls>
                 <source src="videos/SELENIUN - GLPI ENVIO DE NOTIFICAÇÃO EM MASSA.mp4" type="video/mp4">
                 Seu navegador não suporta o vídeo.
             </video>
         </div>
     </section>
 
-    <section class="container bg-dark text-white my-5">
+    <section class="container my-5">
         <h2 class="text-center">Testes Automatizados com Cypress</h2>
         <p class="text-center">Validação se todos os sites estão UP!</p>
-        <!-- Centralização do vídeo -->
         <div class="d-flex justify-content-center">
-            <video width="600" height="400" controls>
+            <video controls>
                 <source src="videos/CYPRESS - Sites UP.mp4" type="video/mp4">
                 Seu navegador não suporta o vídeo.
             </video>
         </div>
     </section>
 
-    <section class="container bg-dark text-white my-5">
-        <h2 class="text-center">Estrutura de Projeto Cypress (Boas Praticas)</h2>
-        <div id="project-structure" class="tree mt-4"></div>
-    </section>
-    <section class="container bg-dark text-white my-5">
-        <p>Clique no botão abaixo para baixar o script que cria a estrutura de pastas</p>
-        <!-- Botão para baixar o script -->
-        <button class="btn btn-light" onclick="downloadScript()">Baixar Estrutura de Pastas</button>
-    </section>
-    <section class="container bg-dark text-white my-5">
-        <h2 class="text-center">Comandos Principais do Cypress</h2>
-        <p class="text-center">Alguns dos comandos mais utilizados no Cypress para automação de testes, com exemplos
-            práticos.</p>
-        <ul class="list-group">
-            <li class="list-group-item "><strong>cy.visit()</strong>: Acessa uma URL específica.
-                <pre><code>cy.visit('/login'); // Acessa a página de login</code></pre>
-            </li>
-            <li class="list-group-item"><strong>cy.get()</strong>: Seleciona um elemento com base em um seletor CSS.
-                <pre><code>cy.get('[data-cy=botao-submit]').click(); // Clica em um botão usando seletor customizado</code></pre>
-            </li>
-            <li class="list-group-item"><strong>cy.contains()</strong>: Seleciona um elemento que contém um texto
-                específico.
-                <pre><code>cy.contains('Enviar').click(); // Clica em um botão que contém o texto 'Enviar'</code></pre>
-            </li>
-            <li class="list-group-item"><strong>cy.click()</strong>: Simula um clique em um elemento.
-                <pre><code>cy.get('[data-cy=botao-abrir-modal]').click(); // Clica no botão para abrir um modal</code></pre>
-            </li>
-            <li class="list-group-item"><strong>cy.type()</strong>: Simula a digitação de texto em campos de entrada.
-                <pre><code>cy.get('[data-cy=campo-usuario]').type('usuario_teste'); // Digita em um campo de texto</code></pre>
-            </li>
-            <li class="list-group-item"><strong>cy.clear()</strong>: Limpa o valor de um campo de entrada.
-                <pre><code>cy.get('[data-cy=campo-usuario]').clear(); // Limpa o campo de entrada</code></pre>
-            </li>
-            <li class="list-group-item"><strong>cy.select()</strong>: Seleciona uma opção em um campo select.
-                <pre><code>cy.get('[data-cy=dropdown-cidade]').select('São Paulo'); // Seleciona uma cidade em um dropdown</code></pre>
-            </li>
-            <li class="list-group-item"><strong>cy.check() e cy.uncheck()</strong>: Marca ou desmarca um checkbox ou
-                radio button.
-                <pre><code>cy.get('[data-cy=aceitar-termos]').check(); // Marca uma checkbox
-cy.get('[data-cy=aceitar-termos]').uncheck(); // Desmarca uma checkbox</code></pre>
-            </li>
-            <li class="list-group-item"><strong>cy.fixture()</strong>: Carrega dados de um arquivo JSON na pasta
-                fixtures.
-                <pre><code>cy.fixture('users').then((users) => {
-  cy.get('[data-cy=campo-usuario]').type(users.validUser.username);
-});</code></pre>
-            </li>
-            <li class="list-group-item"><strong>cy.intercept()</strong>: Intercepta e simula uma resposta de uma chamada
-                de API.
-                <pre><code>cy.intercept('GET', '/api/usuarios', { fixture: 'usuarios.json' }).as('getUsuarios');
-cy.visit('/usuarios');
-cy.wait('@getUsuarios'); // Aguarda a resposta mockada</code></pre>
-            </li>
-            <li class="list-group-item"><strong>cy.wait()</strong>: Pausa o teste até que um alias ou tempo específico
-                seja alcançado.
-                <pre><code>cy.wait('@getUsuarios'); // Espera que a resposta da API 'getUsuarios' seja recebida</code></pre>
-            </li>
-            <li class="list-group-item"><strong>cy.reload()</strong>: Recarrega a página.
-                <pre><code>cy.reload(); // Recarrega a página atual</code></pre>
-            </li>
-            <li class="list-group-item"><strong>cy.viewport()</strong>: Define o tamanho da tela para simular diferentes
-                dispositivos.
-                <pre><code>cy.viewport('iphone-6'); // Simula um iPhone 6</code></pre>
-            </li>
-            <li class="list-group-item"><strong>cy.scrollTo()</strong>: Rola a página para uma posição específica.
-                <pre><code>cy.scrollTo('bottom'); // Rola até o final da página</code></pre>
-            </li>
-            <li class="list-group-item"><strong>cy.url()</strong>: Obtém ou faz asserções sobre a URL atual.
-                <pre><code>cy.url().should('include', '/dashboard'); // Verifica se a URL contém '/dashboard'</code></pre>
-            </li>
-            <li class="list-group-item"><strong>cy.go()</strong>: Navega para frente ou para trás no histórico de
-                navegação.
-                <pre><code>cy.go('back'); // Vai para a página anterior
-cy.go('forward'); // Vai para a próxima página</code></pre>
-            </li>
-            <li class="list-group-item"><strong>cy.screenshot()</strong>: Tira uma captura de tela da página atual ou de
-                um elemento específico.
-                <pre><code>cy.screenshot('pagina-login'); // Salva uma captura da página de login</code></pre>
-            </li>
-            <li class="list-group-item"><strong>cy.wrap()</strong>: Encapsula um objeto ou valor para permitir que
-                Cypress interaja com ele.
-                <pre><code>cy.wrap({ nome: 'Cypress' }).its('nome').should('eq', 'Cypress');</code></pre>
-            </li>
-            <li class="list-group-item"><strong>cy.exec()</strong>: Executa um comando no terminal do sistema
-                operacional.
-                <pre><code>cy.exec('npm run seed:database'); // Executa um comando para semear o banco de dados</code></pre>
-            </li>
-            <li class="list-group-item"><strong>cy.request()</strong>: Faz uma solicitação HTTP diretamente, útil para
-                interagir com APIs.
-                <pre><code>cy.request('POST', '/api/login', {
-  username: 'usuario_teste',
-  password: 'senha_teste'
-}).then((response) => {
-  expect(response.status).to.eq(200); // Verifica se o status da resposta é 200
-});</code></pre>
-            </li>
+    <section id="ferramentas-tecnologias" class="container my-5">
+        <h3>Documentações</h3>
+        <p>Base de consultas:</p>
+        <ul>
+            <li><a href="https://github.com/pedrohyvo/cypress-docs-pt-br?tab=readme-ov-file" target="_blank">Cypress | PT-BR</a></li>
+            <li><a href="https://docs.cypress.io/app/get-started/why-cypress" target="_blank">Cypress | Oficial</a></li>
+            <li><a href="https://www.selenium.dev/documentation/en/" target="_blank">Selenium</a></li>
+            <li><a href="https://appium.io/docs/en/about-appium/overview/" target="_blank">Appium</a></li>
+            <li><a href="https://cucumber.io/docs/guides/10-minute-tutorial/" target="_blank">Cucumber</a></li>
+            <li><a href="https://docs.katalon.com/katalon-studio/docs/overview.html" target="_blank">Katalon</a></li>
+            <li><a href="https://www.protractortest.org/#/" target="_blank">Protractor</a></li>
         </ul>
     </section>
 
-    <footer class="bg-light text-center py-4">
+    <section class="container my-5">
+        <h2 class="text-center">Estrutura de Projeto Cypress (Boas Praticas)</h2>
+        <div id="project-structure" class="tree mt-4"></div>
+    </section>
+    <section class="container my-5">
+        <p>Clique no botão abaixo para baixar o script que cria a estrutura de pastas</p>
+        <button class="btn btn-light" onclick="downloadScript()">Baixar Estrutura de Pastas</button>
+    </section>
+
+    <footer class="text-center py-4">
         <p>© 2024 - Meu Portfólio de Testes Automatizados</p>
+        <p>Felipe Lisboa</p>
+        <div class="d-flex justify-content-center mt-2">
+            <a href="https://www.linkedin.com/in/felipe-lisboa-aa6b61216/" class="mx-2" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" width="30" height="30">
+            </a>
+            <a href="https://github.com/felipedeboa" class="mx-2" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" width="30" height="30">
+            </a>
+            <a href="https://wa.me/5585996995988" class="mx-2" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" width="30" height="30">
+            </a>
+        </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -149,14 +98,13 @@ cy.go('forward'); // Vai para a próxima página</code></pre>
     <script src="script.js"></script>
     <script>
         function downloadScript() {
-            // Cria um link temporário para o script de configuração
             const link = document.createElement('a');
             link.href = 'bat/cypress.bat';
             link.download = 'cypress.bat';
             link.click();
-            document.body.appendChild(link); // Adiciona o link temporariamente ao DOM
-            link.click(); // Dispara o clique
-            document.body.removeChild(link); // Remove o link após o clique
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         }
     </script>
 </body>
